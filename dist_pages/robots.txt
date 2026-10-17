@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bagonsa-official.github.io/bagonsa-seo-engine/sitemap.xml
+Sitemap: https://simokhi76-arch.github.io/bagonsa-seo-engine/sitemap.xml

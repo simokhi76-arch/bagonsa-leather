@@ -79,7 +79,7 @@ SILO_CATEGORIES = {
 }
 
 # GitHub Configuration for Pages and Parasite Colab Notebooks
-GITHUB_USER = os.getenv("GITHUB_USER", "bagonsa-official")
+GITHUB_USER = os.getenv("GITHUB_USER", "simokhi76-arch")
 GITHUB_REPO = os.getenv("GITHUB_REPO", "bagonsa-seo-engine")
 GITHUB_BRANCH = os.getenv("GITHUB_BRANCH", "main")
 
