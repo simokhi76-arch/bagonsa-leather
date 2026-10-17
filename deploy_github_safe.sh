@@ -60,12 +60,15 @@ fi
 echo "Staging static pages, Colab parasite notebooks, source code, and configuration..."
 git add dist_pages/
 git add dist_colab/
+git add dist_huggingface/
 git add src/
 git add data/
 git add config.py
 git add requirements.txt
 git add deploy_github_safe.sh
+git add deploy_github_safe.ps1
 git add deploy_gcs_bucket.py
+git add deploy_huggingface.py
 git add .github/ 2>/dev/null || true
 
 # Check if there are staged changes
