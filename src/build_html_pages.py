@@ -250,6 +250,7 @@ def render_html_page(
     <meta name="description" content="{meta_desc}">
     <link rel="canonical" href="{canonical_url}">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="google-site-verification" content="2plITmBLaHMbWEm8O0qjfrzMyH0yhIDoCL-5Exq1vmU">
     
     <!-- OpenGraph / Social Metadata -->
     <meta property="og:type" content="article">
@@ -920,6 +921,7 @@ def render_hub_index(keywords: List[Dict[str, Any]]) -> str:
     <meta name="description" content="Explore BAGONSA's complete technical specification directory for 100 handcrafted full-grain leather backpacks, vintage jackets, croco handbags, travel duffels, and boots.">
     <link rel="canonical" href="{canonical_index}">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="google-site-verification" content="2plITmBLaHMbWEm8O0qjfrzMyH0yhIDoCL-5Exq1vmU">
     
     <style>
         :root {{
