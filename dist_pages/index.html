@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAGONSA Full-Grain Leather Specification Directory & Master Guide</title>
+    <meta name="description" content="Explore BAGONSA's complete technical specification directory for 100 handcrafted full-grain leather backpacks, vintage jackets, croco handbags, travel duffels, and boots.">
+    <link rel="canonical" href="https://bagonsa-official.github.io/bagonsa-seo-engine/index.html">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <style>
+        :root {
+            --bg-canvas: #faf8f5;
+            --bg-card: #ffffff;
+            --text-primary: #1c1917;
+            --text-secondary: #57534e;
+            --text-muted: #78716c;
+            --accent-leather: #8b4513;
+            --accent-brass: #b45309;
+            --border-light: #e7e5e4;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg-canvas);
+            color: var(--text-primary);
+            font-family: var(--font-stack);
+            line-height: 1.6;
+        }
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-light);
+            padding: 1.25rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .brand-logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+            color: var(--text-primary);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .brand-logo span { color: var(--accent-leather); }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-left: 1.5rem;
+        }
+        .nav-links a:hover { color: var(--accent-leather); }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 5rem;
+        }
+        .hub-hero {
+            background: linear-gradient(135deg, #1c1917 0%, #292524 100%);
+            color: #ffffff;
+            border-radius: 16px;
+            padding: 3.5rem 2.5rem;
+            text-align: center;
+            margin-bottom: 3.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .hub-hero h1 {
+            font-size: 2.75rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            font-weight: 800;
+        }
+        .hub-hero p {
+            font-size: 1.2rem;
+            color: #d6d3d1;
+            max-width: 780px;
+            margin: 0 auto 2rem;
+        }
+        .hub-pills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        .hub-pills a {
+            background: rgba(255,255,255,0.12);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .hub-pills a:hover {
+            background: var(--accent-brass);
+        }
+        .hub-silo-section {
+            margin-bottom: 4rem;
+        }
+        .hub-silo-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 1.75rem;
+            border-bottom: 2px solid var(--border-light);
+            padding-bottom: 1rem;
+            gap: 1rem;
+        }
+        .hub-silo-header h2 {
+            font-size: 1.75rem;
+            color: var(--text-primary);
+        }
+        .hub-silo-header p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-top: 0.25rem;
+        }
+        .hub-silo-shop-btn {
+            color: var(--accent-leather);
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        .hub-silo-shop-btn:hover { text-decoration: underline; }
+        .hub-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 1.5rem;
+        }
+        .hub-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 10px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hub-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            border-color: #cbd5e1;
+        }
+        .hub-card-mod {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #0369a1;
+            background: #e0f2fe;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 0.75rem;
+            align-self: flex-start;
+        }
+        .hub-card h3 {
+            font-size: 1.05rem;
+            line-height: 1.35;
+            margin-bottom: 0.75rem;
+        }
+        .hub-card h3 a {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        .hub-card h3 a:hover {
+            color: var(--accent-leather);
+        }
+        .hub-card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            margin-bottom: 1.25rem;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 0.75rem;
+        }
+        .hub-price { font-weight: 700; color: var(--accent-leather); }
+        .hub-rating { color: #d97706; }
+        .hub-card-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+        .hub-btn-read {
+            color: var(--text-primary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .hub-btn-read:hover { color: var(--accent-leather); text-decoration: underline; }
+        .hub-btn-store {
+            color: var(--accent-brass);
+            text-decoration: none;
+            font-weight: 700;
+        }
+        footer {
+            background: #ffffff;
+            border-top: 1px solid var(--border-light);
+            padding: 3rem 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="brand-logo">BAGON<span>SA</span></a>
+            <nav class="nav-links">
+                <a href="#leather-backpacks">Backpacks</a>
+                <a href="#leather-jackets">Jackets</a>
+                <a href="#handbags-totes">Handbags</a>
+                <a href="#travel-duffels">Travel Duffels</a>
+                <a href="#leather-footwear">Footwear</a>
+                <a href="https://bagonsales.shop/" target="_blank" rel="noopener">Official Store</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hub-hero">
+            <h1>BAGONSA Artisanal Leather Specification Directory</h1>
+            <p>
+                Comprehensive material integrity analysis, technical blueprints, and verified buyer specifications 
+                for 100 handcrafted full-grain leather goods. Hand-assembled with solid brass hardware, YKK zippers, 
+                and Express 3-5 day DHL delivery worldwide.
+            </p>
+            <div class="hub-pills">
+                <a href="#leather-backpacks">🎒 20 Leather Backpack Guides</a>
+                <a href="#leather-jackets">🧥 20 Vintage Jacket Guides</a>
+                <a href="#handbags-totes">👜 20 Handbag & Tote Guides</a>
+                <a href="#travel-duffels">🧳 20 Travel Duffel Guides</a>
+                <a href="#leather-footwear">👞 20 Artisanal Boot Guides</a>
+            </div>
+        </div>
+
+        
+        <section class="hub-silo-section" id="leather-backpacks">
+            <div class="hub-silo-header">
+                <div>
+                    <h2>🎒 Leather Backpacks & Laptop Bags</h2>
+                    <p>Ergonomic, padded full-grain leather backpacks and minimalist commuter rucksacks engineered for 13-16 inch laptops.</p>
+                </div>
+                <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-silo-shop-btn" target="_blank" rel="noopener">
+                    Shop Collection &rarr;
+                </a>
+            </div>
+            <div class="hub-cards-grid">
+                <div class="hub-card">
+                <span class="hub-card-mod">USA Express Delivery</span>
+                <h3><a href="cognac-14-inch-laptop-leather-backpack-usa.html">Cognac 14 inch Laptop Leather Backpack USA</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (142 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="cognac-14-inch-laptop-leather-backpack-usa.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Best Minimalist Design</span>
+                <h3><a href="minimalist-brown-leather-roll-top-rucksack.html">Minimalist Brown Leather Roll Top Rucksack</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (98 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="minimalist-brown-leather-roll-top-rucksack.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Ergonomic Commuter</span>
+                <h3><a href="full-grain-leather-15-6-laptop-commuter-bag.html">Full Grain Leather 15.6 Laptop Commuter Bag</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (184 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="full-grain-leather-15-6-laptop-commuter-bag.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">UK Fast Dispatch</span>
+                <h3><a href="handcrafted-vintage-distressed-leather-backpack-uk.html">Handcrafted Vintage Distressed Leather Backpack UK</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (116 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="handcrafted-vintage-distressed-leather-backpack-uk.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Canada Free Shipping</span>
+                <h3><a href="water-resistant-mens-leather-travel-backpack-canada.html">Water Resistant Mens Leather Travel Backpack Canada</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (87 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="water-resistant-mens-leather-travel-backpack-canada.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Tech Laptop Pouch</span>
+                <h3><a href="slim-leather-work-backpack-13-inch-macbook-pro.html">Slim Leather Work Backpack 13 Inch MacBook Pro</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (129 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="slim-leather-work-backpack-13-inch-macbook-pro.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">EU Express DHL</span>
+                <h3><a href="black-full-grain-leather-business-backpack-eu.html">Black Full Grain Leather Business Backpack EU</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (163 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="black-full-grain-leather-business-backpack-eu.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Brass Buckles</span>
+                <h3><a href="artisanal-veg-tan-leather-knapsack-solid-brass.html">Artisanal Veg Tan Leather Knapsack Solid Brass</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (74 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="artisanal-veg-tan-leather-knapsack-solid-brass.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Under  Value</span>
+                <h3><a href="heavy-duty-heritage-leather-rucksack-under-150.html">Heavy Duty Heritage Leather Rucksack Under 150</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (205 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="heavy-duty-heritage-leather-rucksack-under-150.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">2-in-1 Dual Carry</span>
+                <h3><a href="convertible-leather-backpack-briefcase-two-way.html">Convertible Leather Backpack Briefcase Two Way</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (92 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="convertible-leather-backpack-briefcase-two-way.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Campus Heritage</span>
+                <h3><a href="dark-brown-saddle-leather-university-backpack.html">Dark Brown Saddle Leather University Backpack</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (111 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="dark-brown-saddle-leather-university-backpack.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Personalized Gift</span>
+                <h3><a href="custom-monogrammed-leather-laptop-backpack-gift.html">Custom Monogrammed Leather Laptop Backpack Gift</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (178 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="custom-monogrammed-leather-laptop-backpack-gift.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Photographer Padded</span>
+                <h3><a href="tan-leather-camera-backpack-padded-dividers.html">Tan Leather Camera Backpack Padded Dividers</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (68 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="tan-leather-camera-backpack-padded-dividers.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">YKK Heavy Duty</span>
+                <h3><a href="retro-16-inch-padded-laptop-rucksack-ykk-zippers.html">Retro 16 Inch Padded Laptop Rucksack YKK Zippers</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (134 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="retro-16-inch-padded-laptop-rucksack-ykk-zippers.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Everyday Carry</span>
+                <h3><a href="unisex-waxed-full-grain-leather-city-daypack.html">Unisex Waxed Full Grain Leather City Daypack</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (155 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="unisex-waxed-full-grain-leather-city-daypack.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Executive Utility</span>
+                <h3><a href="executive-leather-laptop-pack-side-water-bottle-pocket.html">Executive Leather Laptop Pack Side Water Bottle Pocket</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (103 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="executive-leather-laptop-pack-side-water-bottle-pocket.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Vintage Classic</span>
+                <h3><a href="vintage-top-grain-leather-college-bookbag-brown.html">Vintage Top Grain Leather College Bookbag Brown</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (89 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="vintage-top-grain-leather-college-bookbag-brown.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Handmade Detail</span>
+                <h3><a href="handmade-flapover-leather-backpack-antique-hardware.html">Handmade Flapover Leather Backpack Antique Hardware</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (147 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="handmade-flapover-leather-backpack-antique-hardware.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">USA Stock Fast Delivery</span>
+                <h3><a href="boutique-full-grain-leather-day-rucksack-usa.html">Boutique Full Grain Leather Day Rucksack USA</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (122 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="boutique-full-grain-leather-day-rucksack-usa.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">25L Large Volume</span>
+                <h3><a href="rustic-hunter-brown-leather-travel-pack-25l.html">Rustic Hunter Brown Leather Travel Pack 25L</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (161 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="rustic-hunter-brown-leather-travel-pack-25l.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-backpacks" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div>
+            </div>
+        </section>
+        
+        <section class="hub-silo-section" id="leather-jackets">
+            <div class="hub-silo-header">
+                <div>
+                    <h2>🧥 Vintage Bomber & Biker Leather Jackets</h2>
+                    <p>Hand-stitched vintage bomber, cafe racer, and biker jackets crafted from rugged full-grain cowhide and supple lambskin.</p>
+                </div>
+                <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-silo-shop-btn" target="_blank" rel="noopener">
+                    Shop Collection &rarr;
+                </a>
+            </div>
+            <div class="hub-cards-grid">
+                <div class="hub-card">
+                <span class="hub-card-mod">Custom Fit Made to Order</span>
+                <h3><a href="custom-made-vintage-leather-bomber-jacket-men.html">Custom Made Vintage Leather Bomber Jacket Men</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (195 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="custom-made-vintage-leather-bomber-jacket-men.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">DHL 3-5 Day Express</span>
+                <h3><a href="distressed-full-grain-biker-leather-jacket-express-shipping.html">Distressed Full Grain Biker Leather Jacket Express Shipping</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (182 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="distressed-full-grain-biker-leather-jacket-express-shipping.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">USA Moto Vintage</span>
+                <h3><a href="men-classic-cafe-racer-brown-leather-jacket-usa.html">Men Classic Cafe Racer Brown Leather Jacket USA</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (143 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="men-classic-cafe-racer-brown-leather-jacket-usa.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Winter Warmth</span>
+                <h3><a href="handmade-lambskin-leather-flight-jacket-shearling-collar.html">Handmade Lambskin Leather Flight Jacket Shearling Collar</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (118 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="handmade-lambskin-leather-flight-jacket-shearling-collar.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Rider Protection</span>
+                <h3><a href="heavy-duty-cowhide-motorcycle-jacket-armored-pockets.html">Heavy Duty Cowhide Motorcycle Jacket Armored Pockets</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (167 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="heavy-duty-cowhide-motorcycle-jacket-armored-pockets.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">UK Delivery</span>
+                <h3><a href="vintage-black-double-rider-leather-moto-jacket-uk.html">Vintage Black Double Rider Leather Moto Jacket UK</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (131 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="vintage-black-double-rider-leather-moto-jacket-uk.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Canada Free Dispatch</span>
+                <h3><a href="tailored-brown-suede-trucker-jacket-mens-canada.html">Tailored Brown Suede Trucker Jacket Mens Canada</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (94 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="tailored-brown-suede-trucker-jacket-mens-canada.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">EU Free DHL</span>
+                <h3><a href="washed-vintage-leather-aviator-bomber-jacket-eu.html">Washed Vintage Leather Aviator Bomber Jacket EU</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (154 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="washed-vintage-leather-aviator-bomber-jacket-eu.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Heritage Utility</span>
+                <h3><a href="artisanal-cognac-leather-field-jacket-four-pockets.html">Artisanal Cognac Leather Field Jacket Four Pockets</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (88 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="artisanal-cognac-leather-field-jacket-four-pockets.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Custom Tailored Fit</span>
+                <h3><a href="custom-sized-mens-black-leather-biker-coat-ykk.html">Custom Sized Mens Black Leather Biker Coat YKK</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (126 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="custom-sized-mens-black-leather-biker-coat-ykk.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Under  Tier</span>
+                <h3><a href="distressed-tan-leather-moto-racer-jacket-under-200.html">Distressed Tan Leather Moto Racer Jacket Under 200</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (210 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="distressed-tan-leather-moto-racer-jacket-under-200.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">WWII Heritage A2</span>
+                <h3><a href="authentic-a2-leather-flight-bomber-jacket-ribbed-trim.html">Authentic A2 Leather Flight Bomber Jacket Ribbed Trim</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (175 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="authentic-a2-leather-flight-bomber-jacket-ribbed-trim.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Patina Finish</span>
+                <h3><a href="antique-rubbed-brown-leather-roadster-jacket.html">Antique Rubbed Brown Leather Roadster Jacket</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (102 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="antique-rubbed-brown-leather-roadster-jacket.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Thermal Satin Insulated</span>
+                <h3><a href="winter-quilted-leather-motorcycle-jacket-thermal-lining.html">Winter Quilted Leather Motorcycle Jacket Thermal Lining</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (139 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="winter-quilted-leather-motorcycle-jacket-thermal-lining.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">USA Express Shipping</span>
+                <h3><a href="hand-burnished-full-grain-leather-bomber-usa.html">Hand Burnished Full Grain Leather Bomber USA</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (160 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="hand-burnished-full-grain-leather-bomber-usa.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Athletic Slim Cut</span>
+                <h3><a href="mens-slim-fit-snap-collar-leather-biker-jacket.html">Mens Slim Fit Snap Collar Leather Biker Jacket</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (114 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="mens-slim-fit-snap-collar-leather-biker-jacket.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Rare Olive Patina</span>
+                <h3><a href="distressed-olive-leather-military-field-jacket.html">Distressed Olive Leather Military Field Jacket</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (79 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="distressed-olive-leather-military-field-jacket.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Ultra Soft Lambskin</span>
+                <h3><a href="classic-zip-front-lambskin-leather-jacket-black.html">Classic Zip Front Lambskin Leather Jacket Black</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (144 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="classic-zip-front-lambskin-leather-jacket-black.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Statement Trench</span>
+                <h3><a href="vintage-brown-leather-trench-coat-tailored-fit.html">Vintage Brown Leather Trench Coat Tailored Fit</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (83 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="vintage-brown-leather-trench-coat-tailored-fit.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Solid Brass Rivets</span>
+                <h3><a href="rugged-western-leather-trucker-jacket-brass-buttons.html">Rugged Western Leather Trucker Jacket Brass Buttons</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (127 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="rugged-western-leather-trucker-jacket-brass-buttons.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-jackets" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div>
+            </div>
+        </section>
+        
+        <section class="hub-silo-section" id="handbags-totes">
+            <div class="hub-silo-header">
+                <div>
+                    <h2>👜 Croco-Embossed Handbags & Luxury Totes</h2>
+                    <p>Exquisite croco-embossed structured handbags, luxury suede totes, and versatile crossbody satchels featuring solid brass hardware.</p>
+                </div>
+                <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-silo-shop-btn" target="_blank" rel="noopener">
+                    Shop Collection &rarr;
+                </a>
+            </div>
+            <div class="hub-cards-grid">
+                <div class="hub-card">
+                <span class="hub-card-mod">Under  Luxury</span>
+                <h3><a href="croco-embossed-leather-handbag-under-150.html">Croco Embossed Leather Handbag Under 150</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (215 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="croco-embossed-leather-handbag-under-150.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">UK Fast Dispatch</span>
+                <h3><a href="luxury-suede-crossbody-bag-uk-delivery.html">Luxury Suede Crossbody Bag UK Delivery</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (137 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="luxury-suede-crossbody-bag-uk-delivery.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">USA 3-5 Day Delivery</span>
+                <h3><a href="structured-full-grain-leather-work-tote-bag-usa.html">Structured Full Grain Leather Work Tote Bag USA</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (189 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="structured-full-grain-leather-work-tote-bag-usa.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Artisanal Croco</span>
+                <h3><a href="handcrafted-burgundy-croc-leather-shoulder-bag.html">Handcrafted Burgundy Croc Leather Shoulder Bag</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (104 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="handcrafted-burgundy-croc-leather-shoulder-bag.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Canada Fast Shipping</span>
+                <h3><a href="minimalist-tan-leather-shopper-tote-magnetic-clasp-canada.html">Minimalist Tan Leather Shopper Tote Magnetic Clasp Canada</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (92 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="minimalist-tan-leather-shopper-tote-magnetic-clasp-canada.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Antique Brass Clasps</span>
+                <h3><a href="vintage-black-leather-satchel-crossbody-brass-hardware.html">Vintage Black Leather Satchel Crossbody Brass Hardware</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (166 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="vintage-black-leather-satchel-crossbody-brass-hardware.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">EU Express DHL</span>
+                <h3><a href="emerald-green-croco-leather-evening-bag-eu.html">Emerald Green Croco Leather Evening Bag EU</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (112 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="emerald-green-croco-leather-evening-bag-eu.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Slouchy Hobo Cut</span>
+                <h3><a href="supple-cognac-leather-slouchy-hobo-bag-handcrafted.html">Supple Cognac Leather Slouchy Hobo Bag Handcrafted</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (148 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="supple-cognac-leather-slouchy-hobo-bag-handcrafted.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">2-Way Shoulder Carry</span>
+                <h3><a href="top-handle-leather-handbag-with-detachable-strap.html">Top Handle Leather Handbag With Detachable Strap</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (130 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="top-handle-leather-handbag-with-detachable-strap.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Boho Chic Fringe</span>
+                <h3><a href="handmade-suede-fringe-bucket-bag-boho-vintage.html">Handmade Suede Fringe Bucket Bag Boho Vintage</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (86 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="handmade-suede-fringe-bucket-bag-boho-vintage.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Classic Saddle Bag</span>
+                <h3><a href="classic-brown-leather-saddle-crossbody-bag-flap.html">Classic Brown Leather Saddle Crossbody Bag Flap</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (173 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="classic-brown-leather-saddle-crossbody-bag-flap.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Doctor Frame Bag</span>
+                <h3><a href="chic-croco-textured-leather-doctor-bag-travel.html">Chic Croco Textured Leather Doctor Bag Travel</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (99 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="chic-croco-textured-leather-doctor-bag-travel.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Under  Gift</span>
+                <h3><a href="handstitched-leather-clutch-purse-wristlet-under-100.html">Handstitched Leather Clutch Purse Wristlet Under 100</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (185 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="handstitched-leather-clutch-purse-wristlet-under-100.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Laptop Fits 15 Inch</span>
+                <h3><a href="large-capacity-full-grain-leather-laptop-tote-bag.html">Large Capacity Full Grain Leather Laptop Tote Bag</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (151 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="large-capacity-full-grain-leather-laptop-tote-bag.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">USA Quick Delivery</span>
+                <h3><a href="navy-blue-textured-leather-shoulder-bag-usa.html">Navy Blue Textured Leather Shoulder Bag USA</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (78 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="navy-blue-textured-leather-shoulder-bag-usa.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">UK Delivery Fast</span>
+                <h3><a href="retro-red-leather-satchel-double-buckles-uk.html">Retro Red Leather Satchel Double Buckles UK</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (108 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="retro-red-leather-satchel-double-buckles-uk.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Intricate Woven Look</span>
+                <h3><a href="artisan-woven-leather-handbag-top-grain-tan.html">Artisan Woven Leather Handbag Top Grain Tan</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (121 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="artisan-woven-leather-handbag-top-grain-tan.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Waterproof Lining</span>
+                <h3><a href="daily-commute-leather-handbag-water-resistant-lining.html">Daily Commute Leather Handbag Water Resistant Lining</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (140 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="daily-commute-leather-handbag-water-resistant-lining.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Phone Card Slots</span>
+                <h3><a href="compact-leather-crossbody-phone-bag-card-slots.html">Compact Leather Crossbody Phone Bag Card Slots</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (203 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="compact-leather-crossbody-phone-bag-card-slots.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">EU Express 3-5 Days</span>
+                <h3><a href="luxury-taupe-pebbled-leather-tote-zip-closure-eu.html">Luxury Taupe Pebbled Leather Tote Zip Closure EU</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (115 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="luxury-taupe-pebbled-leather-tote-zip-closure-eu.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-handbags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div>
+            </div>
+        </section>
+        
+        <section class="hub-silo-section" id="travel-duffels">
+            <div class="hub-silo-header">
+                <div>
+                    <h2>🧳 Full-Grain Travel Duffels & Briefcases</h2>
+                    <p>TSA overhead compliant weekend travel duffels, gym holdalls, and executive laptop briefcases built with reinforced YKK brass zippers.</p>
+                </div>
+                <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-silo-shop-btn" target="_blank" rel="noopener">
+                    Shop Collection &rarr;
+                </a>
+            </div>
+            <div class="hub-cards-grid">
+                <div class="hub-card">
+                <span class="hub-card-mod">Weekend Weekender 45L</span>
+                <h3><a href="full-grain-leather-weekend-travel-duffel-bag.html">Full Grain Leather Weekend Travel Duffel Bag</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (219 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="full-grain-leather-weekend-travel-duffel-bag.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">DHL Express 3-5 Days</span>
+                <h3><a href="executive-leather-briefcase-dhl-express.html">Executive Leather Briefcase DHL Express</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (187 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="executive-leather-briefcase-dhl-express.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Ventilated Shoe Pocket</span>
+                <h3><a href="large-mens-leather-travel-duffel-with-shoe-compartment.html">Large Mens Leather Travel Duffel With Shoe Compartment</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (204 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="large-mens-leather-travel-duffel-with-shoe-compartment.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">UK Express Dispatch</span>
+                <h3><a href="handcrafted-vintage-leather-holdall-overnight-bag-uk.html">Handcrafted Vintage Leather Holdall Overnight Bag UK</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (132 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="handcrafted-vintage-leather-holdall-overnight-bag-uk.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Canada Express</span>
+                <h3><a href="waterproof-waxed-suede-weekend-bag-canada-delivery.html">Waterproof Waxed Suede Weekend Bag Canada Delivery</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (96 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="waterproof-waxed-suede-weekend-bag-canada-delivery.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">USA Fast Delivery</span>
+                <h3><a href="heavy-duty-buffalo-leather-gym-bag-usa-delivery.html">Heavy Duty Buffalo Leather Gym Bag USA Delivery</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (158 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="heavy-duty-buffalo-leather-gym-bag-usa-delivery.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">TSA Overhead Bin OK</span>
+                <h3><a href="tsa-approved-leather-carry-on-duffel-45l-eu.html">TSA Approved Leather Carry On Duffel 45L EU</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (169 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="tsa-approved-leather-carry-on-duffel-45l-eu.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Attache Slim Profile</span>
+                <h3><a href="slim-full-grain-leather-attache-case-laptop-15.html">Slim Full Grain Leather Attache Case Laptop 15</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (114 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="slim-full-grain-leather-attache-case-laptop-15.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Saddle Hunter Leather</span>
+                <h3><a href="distressed-hunter-leather-messenger-briefcase-bag.html">Distressed Hunter Leather Messenger Briefcase Bag</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (176 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="distressed-hunter-leather-messenger-briefcase-bag.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Double Gusset Brass</span>
+                <h3><a href="vintage-lawyer-leather-briefcase-double-gusset-brass.html">Vintage Lawyer Leather Briefcase Double Gusset Brass</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (125 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="vintage-lawyer-leather-briefcase-double-gusset-brass.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">55L Heavy Luggage</span>
+                <h3><a href="handmade-55l-extended-travel-leather-duffel-bag.html">Handmade 55L Extended Travel Leather Duffel Bag</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (143 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="handmade-55l-extended-travel-leather-duffel-bag.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Luggage Trolley Sleeve</span>
+                <h3><a href="brown-leather-pilot-flight-case-roller-compatible.html">Brown Leather Pilot Flight Case Roller Compatible</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (89 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="brown-leather-pilot-flight-case-roller-compatible.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Under  Steal</span>
+                <h3><a href="under-150-full-grain-leather-overnight-weekender.html">Under 150 Full Grain Leather Overnight Weekender</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (212 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="under-150-full-grain-leather-overnight-weekender.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Suiter Garment Bag</span>
+                <h3><a href="dark-brown-leather-garment-duffel-bag-convertible.html">Dark Brown Leather Garment Duffel Bag Convertible</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (119 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="dark-brown-leather-garment-duffel-bag-convertible.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Ergonomic Padded Strap</span>
+                <h3><a href="rugged-tan-leather-sports-holdall-padded-strap.html">Rugged Tan Leather Sports Holdall Padded Strap</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (102 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="rugged-tan-leather-sports-holdall-padded-strap.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Unisex Professional</span>
+                <h3><a href="artisanal-cognac-leather-satchel-briefcase-unisex.html">Artisanal Cognac Leather Satchel Briefcase Unisex</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (137 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="artisanal-cognac-leather-satchel-briefcase-unisex.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">USA Priority DHL</span>
+                <h3><a href="black-leather-weekender-bag-ykk-heavy-zippers-usa.html">Black Leather Weekender Bag YKK Heavy Zippers USA</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (164 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="black-leather-weekender-bag-ykk-heavy-zippers-usa.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Gladstone Frame Top</span>
+                <h3><a href="vintage-doctors-leather-bag-gladstone-frame-top.html">Vintage Doctors Leather Bag Gladstone Frame Top</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (94 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="vintage-doctors-leather-bag-gladstone-frame-top.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Weatherproof Cowhide</span>
+                <h3><a href="commuter-leather-laptop-briefcase-water-resistant.html">Commuter Leather Laptop Briefcase Water Resistant</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (150 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="commuter-leather-laptop-briefcase-water-resistant.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">EU Express 3-5 Days</span>
+                <h3><a href="artisanal-veg-tanned-travel-duffel-brass-rivets-eu.html">Artisanal Veg Tanned Travel Duffel Brass Rivets EU</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (131 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="artisanal-veg-tanned-travel-duffel-brass-rivets-eu.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-travel-bags" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div>
+            </div>
+        </section>
+        
+        <section class="hub-silo-section" id="leather-footwear">
+            <div class="hub-silo-header">
+                <div>
+                    <h2>👞 Handcrafted Leather Boots & Footwear</h2>
+                    <p>Artisanal Goodyear-welted full-grain leather dress boots, rugged chelsea boots, and custom-fitted dress shoes built for resolute durability.</p>
+                </div>
+                <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-silo-shop-btn" target="_blank" rel="noopener">
+                    Shop Collection &rarr;
+                </a>
+            </div>
+            <div class="hub-cards-grid">
+                <div class="hub-card">
+                <span class="hub-card-mod">Goodyear Welted Boots</span>
+                <h3><a href="handcrafted-full-grain-leather-dress-boots.html">Handcrafted Full Grain Leather Dress Boots</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (189 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="handcrafted-full-grain-leather-dress-boots.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Canada Custom Sized</span>
+                <h3><a href="custom-fitted-artisanal-leather-shoes-canada.html">Custom Fitted Artisanal Leather Shoes Canada</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (114 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="custom-fitted-artisanal-leather-shoes-canada.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">USA 3-5 Day Express</span>
+                <h3><a href="mens-chelsea-boots-full-grain-pull-up-leather-usa.html">Mens Chelsea Boots Full Grain Pull Up Leather USA</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (224 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="mens-chelsea-boots-full-grain-pull-up-leather-usa.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">UK Express Dispatch</span>
+                <h3><a href="vintage-cap-toe-leather-oxford-shoes-hand-burnished-uk.html">Vintage Cap Toe Leather Oxford Shoes Hand Burnished UK</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (135 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="vintage-cap-toe-leather-oxford-shoes-hand-burnished-uk.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Vibram Commando Lug</span>
+                <h3><a href="rugged-vibram-sole-leather-service-boots-brown.html">Rugged Vibram Sole Leather Service Boots Brown</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (172 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="rugged-vibram-sole-leather-service-boots-brown.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">EU Express DHL</span>
+                <h3><a href="handmade-chukka-boots-suede-brown-leather-eu.html">Handmade Chukka Boots Suede Brown Leather EU</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (98 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="handmade-chukka-boots-suede-brown-leather-eu.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Solid Brass Eyelets</span>
+                <h3><a href="waterproof-waxed-leather-combat-boots-men-brass-eyelets.html">Waterproof Waxed Leather Combat Boots Men Brass Eyelets</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (156 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="waterproof-waxed-leather-combat-boots-men-brass-eyelets.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Artisanal Brogue</span>
+                <h3><a href="classic-wingtip-brogue-leather-shoes-hand-painted.html">Classic Wingtip Brogue Leather Shoes Hand Painted</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (128 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="classic-wingtip-brogue-leather-shoes-hand-painted.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Moto Harness Buckle</span>
+                <h3><a href="black-leather-biker-ankle-boots-harness-buckle.html">Black Leather Biker Ankle Boots Harness Buckle</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (141 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="black-leather-biker-ankle-boots-harness-buckle.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Double Monk Strap</span>
+                <h3><a href="artisanal-monk-strap-leather-shoes-double-buckle.html">Artisanal Monk Strap Leather Shoes Double Buckle</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (107 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="artisanal-monk-strap-leather-shoes-double-buckle.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">USA Free Dispatch</span>
+                <h3><a href="distressed-leather-roper-cowboy-boots-handcrafted-usa.html">Distressed Leather Roper Cowboy Boots Handcrafted USA</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (163 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="distressed-leather-roper-cowboy-boots-handcrafted-usa.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Hand Stitched Loafers</span>
+                <h3><a href="cognac-brown-leather-penny-loafers-hand-stitched.html">Cognac Brown Leather Penny Loafers Hand Stitched</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (182 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="cognac-brown-leather-penny-loafers-hand-stitched.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Resolable Stitchdown</span>
+                <h3><a href="custom-resolable-leather-work-boots-padded-collar.html">Custom Resolable Leather Work Boots Padded Collar</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (118 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="custom-resolable-leather-work-boots-padded-collar.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">UK Free Shipping</span>
+                <h3><a href="vintage-derbies-distressed-full-grain-leather-uk.html">Vintage Derbies Distressed Full Grain Leather UK</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (91 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="vintage-derbies-distressed-full-grain-leather-uk.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Natural Crepe Sole</span>
+                <h3><a href="handmade-leather-chelsea-boots-crepe-sole-comfort.html">Handmade Leather Chelsea Boots Crepe Sole Comfort</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (134 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="handmade-leather-chelsea-boots-crepe-sole-comfort.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Seamless Wholecut</span>
+                <h3><a href="artisanal-wholecut-leather-shoes-seamless-black.html">Artisanal Wholecut Leather Shoes Seamless Black</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (105 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="artisanal-wholecut-leather-shoes-seamless-black.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Artisanal Cuban Heel</span>
+                <h3><a href="western-suede-ankle-boots-cuban-heel-handcrafted.html">Western Suede Ankle Boots Cuban Heel Handcrafted</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (88 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="western-suede-ankle-boots-cuban-heel-handcrafted.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Moc Toe Commando</span>
+                <h3><a href="heavy-duty-lug-sole-leather-moc-toe-boots.html">Heavy Duty Lug Sole Leather Moc Toe Boots</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 5.0 (177 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="heavy-duty-lug-sole-leather-moc-toe-boots.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">Deck Non-Slip Sole</span>
+                <h3><a href="hand-burnished-leather-boat-shoes-non-slip-deck-sole.html">Hand Burnished Leather Boat Shoes Non Slip Deck Sole</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.8 (112 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="hand-burnished-leather-boat-shoes-non-slip-deck-sole.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div><div class="hub-card">
+                <span class="hub-card-mod">EU Express 3-5 Days</span>
+                <h3><a href="custom-full-grain-leather-jodhpur-boots-brass-buckle-eu.html">Custom Full Grain Leather Jodhpur Boots Brass Buckle EU</a></h3>
+                <div class="hub-card-meta">
+                    <span class="hub-price"> - </span>
+                    <span class="hub-rating">★ 4.9 (149 reviews)</span>
+                </div>
+                <div class="hub-card-links">
+                    <a href="custom-full-grain-leather-jodhpur-boots-brass-buckle-eu.html" class="hub-btn-read">Read Specification &rarr;</a>
+                    <a href="https://bagonsales.shop/collections/leather-footwear" class="hub-btn-store" target="_blank" rel="noopener">Shop Store</a>
+                </div>
+            </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2026 BAGONSA. Handcrafted Full-Grain & Top-Grain Leather Goods.</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="sitemap.xml" style="color: var(--accent-leather); text-decoration: none;">XML Sitemap</a> | 
+            <a href="robots.txt" style="color: var(--accent-leather); text-decoration: none;">Robots.txt</a> | 
+            <a href="https://bagonsales.shop/" style="color: var(--accent-leather); text-decoration: none;">Visit BAGONSA Store</a>
+        </p>
+    </footer>
+
+</body>
+</html>
