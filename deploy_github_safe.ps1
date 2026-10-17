@@ -59,6 +59,7 @@ Write-Host "Staging static pages, Colab notebooks, source code, and configuratio
 git add dist_pages/
 git add dist_colab/
 git add dist_huggingface/
+git add dist_gitbook/
 git add src/
 git add data/
 git add config.py
