@@ -13,8 +13,8 @@ echo "BAGONSA SAFE SINGLE-COMMIT GIT DEPLOYMENT"
 echo "================================================================="
 
 # 1. Environment & Parameter Extraction
-GITHUB_USER="${GITHUB_USER:-bagonsa-official}"
-REPO_NAME="${GITHUB_REPO:-bagonsa-seo-engine}"
+GITHUB_USER="${GITHUB_USER:-simokhi76-arch}"
+REPO_NAME="${GITHUB_REPO:-bagonsa-leather}"
 BRANCH="${GITHUB_BRANCH:-main}"
 COMMIT_MSG="Docs: update product specification directory"
 

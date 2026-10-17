@@ -12,8 +12,8 @@ Write-Host "=================================================================" -
 Write-Host "BAGONSA SAFE SINGLE-COMMIT GIT DEPLOYMENT (PowerShell)" -ForegroundColor Cyan
 Write-Host "=================================================================" -ForegroundColor Cyan
 
-$GithubUser = if ($env:GITHUB_USER) { $env:GITHUB_USER } else { "bagonsa-official" }
-$RepoName   = if ($env:GITHUB_REPO) { $env:GITHUB_REPO } else { "bagonsa-seo-engine" }
+$GithubUser = if ($env:GITHUB_USER) { $env:GITHUB_USER } else { "simokhi76-arch" }
+$RepoName   = if ($env:GITHUB_REPO) { $env:GITHUB_REPO } else { "bagonsa-leather" }
 $Branch     = if ($env:GITHUB_BRANCH) { $env:GITHUB_BRANCH } else { "main" }
 $CommitMsg  = "Docs: update product specification directory"
 
