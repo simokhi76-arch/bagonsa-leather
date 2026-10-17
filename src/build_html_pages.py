@@ -1145,6 +1145,7 @@ def render_hub_index(keywords: List[Dict[str, Any]]) -> str:
                 <a href="#handbags-totes">Handbags</a>
                 <a href="#travel-duffels">Travel Duffels</a>
                 <a href="#leather-footwear">Footwear</a>
+                <a href="colab-directory.html" style="color: var(--accent-brass); font-weight: 700;">Colab Directory (100)</a>
                 <a href="{config.STORE_URL}" target="_blank" rel="noopener">Official Store</a>
             </nav>
         </div>
@@ -1184,8 +1185,130 @@ def render_hub_index(keywords: List[Dict[str, Any]]) -> str:
 """
 
 
+def render_colab_directory(keywords: List[Dict[str, Any]]) -> str:
+    """Builds an HTML directory linking all 100 Google Colab parasite notebooks."""
+    silos_grouped: Dict[str, List[Dict[str, Any]]] = {}
+    for kw in keywords:
+        s = kw["silo_category"]
+        if s not in silos_grouped:
+            silos_grouped[s] = []
+        silos_grouped[s].append(kw)
+
+    sections_html = ""
+    for silo_key, items in silos_grouped.items():
+        silo_info = config.SILO_CATEGORIES.get(silo_key, {})
+        silo_title = silo_info.get("name", silo_key)
+        silo_icon = silo_info.get("icon", "👜")
+        silo_url = silo_info.get("target_url", config.STORE_URL)
+
+        cards_html = "".join([
+            f"""<div class="colab-card">
+                <span class="badge-colab">Google Colab .ipynb</span>
+                <h3>{item['keyword']}</h3>
+                <p class="colab-price">{item['price_range']} · ★ {item['rating_value']} ({item['review_count']} reviews)</p>
+                <div class="colab-links">
+                    <a href="{config.COLAB_BASE_URL}{item['slug']}.ipynb" target="_blank" rel="noopener" class="btn-colab-direct">
+                        Open on Google Colab &rarr;
+                    </a>
+                    <a href="{item['slug']}.html" class="btn-web-direct">Web Guide</a>
+                </div>
+            </div>"""
+            for item in items
+        ])
+
+        sections_html += f"""
+        <section class="colab-silo-section" id="{silo_key}">
+            <div class="colab-silo-header">
+                <h2>{silo_icon} {silo_title} ({len(items)} Colab Notebooks)</h2>
+                <a href="{silo_url}" target="_blank" rel="noopener" class="store-link">Shop Category &rarr;</a>
+            </div>
+            <div class="colab-cards-grid">
+                {cards_html}
+            </div>
+        </section>
+        """
+
+    canonical_colab = f"{config.GITHUB_PAGES_BASE_URL}colab-directory.html"
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAGONSA Google Colab Technical Specifications Directory (100 Notebooks)</title>
+    <meta name="description" content="Access 100 cloud-rendered Google Colab technical notebooks on colab.research.google.com for BAGONSA handcrafted full-grain leather goods.">
+    <link rel="canonical" href="{canonical_colab}">
+    <meta name="robots" content="index, follow">
+    <style>
+        :root {{
+            --bg-canvas: #faf8f5;
+            --bg-card: #ffffff;
+            --text-primary: #1c1917;
+            --text-secondary: #57534e;
+            --accent-leather: #8b4513;
+            --accent-brass: #b45309;
+            --border-light: #e7e5e4;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+        }}
+        * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+        body {{ background-color: var(--bg-canvas); color: var(--text-primary); font-family: var(--font-stack); line-height: 1.6; }}
+        header {{ background: #ffffff; border-bottom: 1px solid var(--border-light); padding: 1.25rem 0; position: sticky; top: 0; z-index: 100; }}
+        .header-inner {{ max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; }}
+        .brand-logo {{ font-size: 1.4rem; font-weight: 800; letter-spacing: 0.15em; color: var(--text-primary); text-decoration: none; text-transform: uppercase; }}
+        .brand-logo span {{ color: var(--accent-leather); }}
+        .nav-links a {{ color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 600; margin-left: 1.5rem; }}
+        .nav-links a:hover {{ color: var(--accent-leather); }}
+        .container {{ max-width: 1200px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }}
+        .hero {{ background: linear-gradient(135deg, #1c1917 0%, #292524 100%); color: #ffffff; border-radius: 16px; padding: 3rem 2rem; text-align: center; margin-bottom: 3rem; }}
+        .hero h1 {{ font-size: 2.5rem; margin-bottom: 1rem; color: #ffffff; }}
+        .hero p {{ font-size: 1.15rem; color: #d6d3d1; max-width: 750px; margin: 0 auto 1.5rem; }}
+        .colab-silo-section {{ margin-bottom: 3.5rem; }}
+        .colab-silo-header {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 2px solid var(--border-light); padding-bottom: 0.75rem; }}
+        .colab-silo-header h2 {{ font-size: 1.5rem; color: var(--text-primary); }}
+        .store-link {{ color: var(--accent-leather); text-decoration: none; font-weight: 700; }}
+        .colab-cards-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }}
+        .colab-card {{ background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 10px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; }}
+        .colab-card:hover {{ border-color: var(--accent-brass); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }}
+        .badge-colab {{ font-size: 0.75rem; font-weight: 700; color: #b45309; background: #fef3c7; padding: 0.2rem 0.5rem; border-radius: 4px; display: inline-block; margin-bottom: 0.5rem; align-self: flex-start; }}
+        .colab-card h3 {{ font-size: 1rem; margin-bottom: 0.5rem; }}
+        .colab-price {{ font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem; }}
+        .colab-links {{ display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; }}
+        .btn-colab-direct {{ color: #ffffff; background: #b45309; text-decoration: none; font-weight: 700; padding: 0.4rem 0.8rem; border-radius: 6px; }}
+        .btn-colab-direct:hover {{ background: #92400e; }}
+        .btn-web-direct {{ color: var(--text-secondary); text-decoration: none; font-weight: 600; }}
+        .btn-web-direct:hover {{ color: var(--accent-leather); }}
+        footer {{ background: #ffffff; border-top: 1px solid var(--border-light); padding: 2.5rem 0; text-align: center; color: var(--text-secondary); font-size: 0.9rem; }}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="brand-logo">BAGON<span>SA</span></a>
+            <nav class="nav-links">
+                <a href="index.html">Master Directory Hub</a>
+                <a href="colab-directory.html" style="color: var(--accent-brass);">Colab Directory</a>
+                <a href="{config.STORE_URL}" target="_blank" rel="noopener">Official Store</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="hero">
+            <h1>BAGONSA Google Colab Notebooks Directory</h1>
+            <p>100 open cloud-executable specification documents hosted on Google Research Colab (colab.research.google.com). Every notebook provides verified material blueprints, benchmark matrices, and direct workshop ordering.</p>
+        </div>
+        {sections_html}
+    </div>
+    <footer>
+        <p>&copy; 2026 {config.BRAND_NAME}. Handcrafted Full-Grain & Top-Grain Leather Goods.</p>
+        <p style="margin-top: 0.5rem;"><a href="index.html">HTML Specification Hub</a> | <a href="sitemap.xml">XML Sitemap</a> | <a href="{config.STORE_URL}">BAGONSA Official Store</a></p>
+    </footer>
+</body>
+</html>
+"""
+
+
 def render_sitemap_xml(keywords: List[Dict[str, Any]]) -> str:
-    """Builds a compliant XML sitemap listing index.html and all 100 pages with ISO lastmod."""
+    """Builds a compliant XML sitemap listing index.html, colab-directory.html, and all 100 pages."""
     now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S+00:00")
     base_url = config.GITHUB_PAGES_BASE_URL
 
@@ -1195,6 +1318,12 @@ def render_sitemap_xml(keywords: List[Dict[str, Any]]) -> str:
     <lastmod>{now_iso}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+  </url>""",
+        f"""  <url>
+    <loc>{base_url}colab-directory.html</loc>
+    <lastmod>{now_iso}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
   </url>"""
     ]
 
@@ -1258,7 +1387,14 @@ def main():
         f.write(index_html)
     print(f"  [OK] Generated Hub Index: {index_file.name}")
 
-    # 3. Generate sitemap.xml
+    # 3. Generate colab-directory.html
+    colab_dir_html = render_colab_directory(keywords)
+    colab_dir_file = config.DIST_PAGES_DIR / "colab-directory.html"
+    with open(colab_dir_file, "w", encoding="utf-8") as f:
+        f.write(colab_dir_html)
+    print(f"  [OK] Generated Colab Directory: {colab_dir_file.name}")
+
+    # 4. Generate sitemap.xml
     sitemap_xml = render_sitemap_xml(keywords)
     sitemap_file = config.DIST_PAGES_DIR / "sitemap.xml"
     with open(sitemap_file, "w", encoding="utf-8") as f:
